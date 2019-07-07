@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Page{% endblock %}
+
+{% block body %}
+            <div class="card-header">
+                <h3>Добрый день, <?php echo $user_name; ?></h3>
+            </div>
+            <div class="card-body">
+                <a href="index.php?action=logout" class="btn float-right login_btn">Logout</a>
+            </div>
+{% endblock %}
