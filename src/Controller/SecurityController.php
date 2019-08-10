@@ -14,7 +14,7 @@ class SecurityController extends AbstractController
 {
     private $session;
     private $security;
-    const TOTAL_BLOCKED_TIME = 50;
+    const TOTAL_BLOCKED_TIME = 300;
 
     public function __construct(SessionInterface $session, Security $security)
     {
