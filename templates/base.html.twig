@@ -1,53 +1,12 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{% block title %}Login Page{% endblock %}</title>
-
-
-    <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-    <!--Custom styles-->
-    {% block stylesheets %}
-        <link href="{{ asset('css/styles.css') }}" rel="stylesheet"/>
-    {% endblock %}
-</head>
-<body>
-<div class="container">
-    <div class="d-flex justify-content-center h-100">
-        <div class="card">
-        {% block body %}
-            <div class="card-header">
-                <h3>{{ Hello }}</h3>
-                {# <h3>Sign In</h3> #}
-            </div>
-            <div class="card-header" style="<?php echo $display; ?>">
-                <p style="color: red";><?php echo $e_message; ?></p>
-            </div>
-            <div class="card-body">
-                <form action="?action=login" method="post">
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="username" name="uname" required <?php echo $disabled; ?>>
-                    </div>
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                        </div>
-                        <input type="password" class="form-control" placeholder="password" name="psw" required <?php echo $disabled; ?>>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Login" class="btn float-right login_btn" <?php echo $disabled; ?>>
-                    </div>
-                </form>
-            </div>
-        {% endblock %}
-        </div>
-    </div>
-</div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
 </html>
